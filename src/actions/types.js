@@ -1,0 +1,3 @@
+export const GET_HISTORIC_DATA="GET_HISTORIC_DATA"
+export const SET_DATE_RANGE="SET_DATE_RANGE"
+export const SET_SYMBOL="SET_SYMBOL"
