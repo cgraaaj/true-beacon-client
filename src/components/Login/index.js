@@ -1,15 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
-import Button from "@mui/material/Button";
-import { custTheme } from "../../utils/custMatUI";
-import { ThemeProvider } from "@mui/material/styles";
-import Checkbox from "@mui/material/Checkbox";
 import { signIn } from "../../actions";
 import { Form, Field, FormSpy } from "react-final-form";
+import { Button, Checkbox } from "semantic-ui-react";
 
 class Login extends React.Component {
   componentDidMount() {}
+
   onSignIn = (values) => {
     console.log(values);
     this.props.signIn(values);
@@ -82,7 +80,6 @@ class Login extends React.Component {
                     render={({ handleSubmit, values }) => (
                       <form className="ui form error" onSubmit={handleSubmit}>
                         <div className="ui two column grid container">
-                          <ThemeProvider theme={custTheme}>
                             <Field
                               name="username"
                               component={this.renderInput}
@@ -130,7 +127,6 @@ class Login extends React.Component {
                                 </Button>
                               </div>
                             </div>
-                          </ThemeProvider>
                         </div>
                       </form>
                     )}

@@ -1,7 +1,8 @@
 import {
     GET_HISTORIC_DATA,
     SET_DATE_RANGE,
-    SET_SYMBOL
+    SET_SYMBOL,
+    SET_MODAL
   } from "../actions/types";
   
   const INTIAL_STATE = {
@@ -15,7 +16,11 @@ import {
       text:"Bank Nifty",
       value: "bank_nifty"
     }],
-    selectedSymbol:''
+    selectedSymbol:'',
+    modal: {
+      flag: false,
+      userProfile:{}
+    },
   };
   
   const dataReducer = (state = INTIAL_STATE, action) => {
@@ -42,6 +47,11 @@ import {
           ...state,
           selectedSymbol:action.payload
         }
+      case SET_MODAL:
+        return {
+          ...state,
+          modal: action.payload,
+        };
       default:
         return state;
     }

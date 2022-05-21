@@ -1,3 +1,9 @@
 export const GET_HISTORIC_DATA="GET_HISTORIC_DATA"
 export const SET_DATE_RANGE="SET_DATE_RANGE"
 export const SET_SYMBOL="SET_SYMBOL"
+
+export const GET_HOLDINGS="GET_HOLDINGS"
+
+export const PLACE_ORDER="PLACE_ORDER"
+
+export const SET_MODAL="SET_MODAL"

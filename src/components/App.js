@@ -1,9 +1,9 @@
-import HistoricalData from "./components/Chart/HistoricalData";
+import Dashboard from "../components/Dashboard";
 
-function App() {
+const App=() =>{
   return (
     <div className="ui container" style={{ width: "98%" }}>
-      <HistoricalData/>
+      <Dashboard/>
     </div>
   );
 }

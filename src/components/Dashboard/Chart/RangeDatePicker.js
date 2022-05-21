@@ -20,18 +20,6 @@ function RangeDatePicker({onDateSelect}) {
   ]);
 
   const staticRanges = createStaticRanges([
-    ...defaultStaticRanges,
-    {
-      label: "This Year",
-      range: () => ({
-        startDate: moment()
-          .startOf("year")
-          .toDate(),
-        endDate: moment()
-          .endOf("day")
-          .toDate()
-      })
-    },
     {
       label: "Last Year",
       range: () => ({
@@ -44,7 +32,33 @@ function RangeDatePicker({onDateSelect}) {
           .endOf("year")
           .toDate()
       })
-    }
+    },
+    {
+      label: "Last Two Years",
+      range: () => ({
+        startDate: moment()
+          .subtract(2, "years")
+          .startOf("year")
+          .toDate(),
+        endDate: moment()
+          .subtract(1, "years")
+          .endOf("year")
+          .toDate()
+      })
+    },
+    {
+      label: "Last Three Years",
+      range: () => ({
+        startDate: moment()
+          .subtract(3, "years")
+          .startOf("year")
+          .toDate(),
+        endDate: moment()
+          .subtract(1, "years")
+          .endOf("year")
+          .toDate()
+      })
+    },
   ]);
 
   return (
